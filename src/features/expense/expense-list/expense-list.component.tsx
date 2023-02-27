@@ -22,7 +22,7 @@ const ExpenseList = function ({ expenses }: ExpenseListProps) {
   );
 
   return (
-    <div className={style["expenses"]}>
+    <section className={style["expenses"]} data-testid="expenses">
       <ExpensesFilter year={year} setNewYear={setNewYear} />
       {filteredData.length > 0 ? (
         filteredData.map((expense) => (
@@ -31,7 +31,7 @@ const ExpenseList = function ({ expenses }: ExpenseListProps) {
       ) : (
         <p>Results not found</p>
       )}
-    </div>
+    </section>
   );
 };
 
